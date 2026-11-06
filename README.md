@@ -81,7 +81,7 @@ Commit `.work/` or add it to `.gitignore`. Each project decides.
 
 ```
 /plugin marketplace add urza/devs
-/plugin install devs@devs
+/plugin install devs@urza
 ```
 
 The skeptic uses [Ponytail](https://github.com/DietrichGebert/ponytail).

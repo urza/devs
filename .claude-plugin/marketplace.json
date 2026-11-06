@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "devs",
-  "description": "A small dev process with roles and fresh-context reviews.",
+  "name": "urza",
+  "description": "Plugins by urza.",
   "owner": {
     "name": "urza",
     "url": "https://github.com/urza"
