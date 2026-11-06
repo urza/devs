@@ -1,5 +1,7 @@
+# devs
+
 <p align="center">
-  <img src="assets/banner.svg" alt="devs: a small dev process with roles for AI coding agents" width="100%">
+  <img src="assets/team.svg" alt="Pen sketch: the devs roles sit around a table and discuss a plan, while step back watches from a step" width="100%">
 </p>
 
 A small development process with roles, for AI coding agents. You brainstorm the
