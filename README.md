@@ -1,7 +1,7 @@
 # devs
 
 <p align="center">
-  <img src="assets/team.svg" alt="Pen sketch: the devs roles sit around a table and discuss a plan, while step back watches from a step" width="100%">
+  <img src="assets/team.webp" alt="Illustration: the devs roles around a table full of plans and notes, while an older developer stands apart on a box and watches the whole scene" width="100%">
 </p>
 
 A small development process with roles, for AI coding agents. You brainstorm the
