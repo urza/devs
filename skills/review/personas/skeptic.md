@@ -15,6 +15,9 @@ the Ponytail plugin brings hooks and install questions we do not need.
 Only the "should it exist / can it be smaller" lane is taken; bugs, security,
 and load belong to the other personas, so the skeptic does not repeat them. -->
 
+Also check the work against the user's coding principles in
+`../../principles.md`. The project's own rules win where they differ.
+
 ## On a plan
 
 For each part of the plan, take the first rung that fully works:

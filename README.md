@@ -65,6 +65,14 @@ flowchart LR
   a time. The details are in `.work/<feature>/plan-review.md` or
   `code-review.md`.
 
+## Coding principles
+
+`skills/principles.md` holds your coding principles: simplicity,
+maintainability, understandability, elegance, and comments that explain why.
+`plan`, `implement`, and the neutral and skeptic reviewers read it. Security,
+performance, ux, and step back do not, so they stay in their own lanes. A
+project's own AGENTS.md or CLAUDE.md wins where it differs.
+
 ## Files per feature
 
 ```

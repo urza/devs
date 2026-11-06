@@ -23,6 +23,8 @@ overrule, say so and ask before you start.
 
 ## 3. Build
 
+- Read the user's coding principles in `../principles.md` and follow them.
+  The project's own rules win where they differ.
 - Follow **Steps** in order. Write the tests that **Testing** asks for.
 - Stay inside the plan. If the plan is wrong or a step cannot work, stop and
   tell the user. Suggest a return to the `plan` skill. Do not redesign

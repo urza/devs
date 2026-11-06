@@ -43,7 +43,9 @@ user. Do not review in this session instead.
 Give each reviewer this brief, and nothing from our conversation:
 
 - The persona file text: its intro and the section for this target
-  ("On a plan" or "On code").
+  ("On a plan" or "On code"). If the persona file points to another file
+  (for example `../../principles.md`), paste that file's text too. The
+  reviewer cannot resolve paths relative to the persona file.
 - The target: the `plan.md` path, or the diff command and `plan.md` path.
   The reviewer may read any file in the repo.
 - This output contract:

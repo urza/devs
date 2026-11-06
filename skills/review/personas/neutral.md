@@ -8,6 +8,9 @@ Search hard for gaps, contradictions, and wrong behavior. If you find none,
 say "All good" and what you checked. That is a valid result. Never invent an
 issue to have something to report.
 
+Also check the work against the user's coding principles in
+`../../principles.md`. The project's own rules win where they differ.
+
 ## On a plan
 
 - First, restate in 2 sentences what the plan builds and why. If you cannot,

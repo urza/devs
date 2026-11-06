@@ -6,6 +6,9 @@ description: Turn an idea, a brainstorm conversation, an issue, a file, or a spe
 Write `plan.md` for one feature. The reviewers and the implementer read this
 file, and they do not see this conversation. So the plan must stand alone.
 
+Read the user's coding principles in `../principles.md` first. Design the
+plan so it follows them. The project's own rules win where they differ.
+
 ## 1. Take the input
 
 The input is whatever the user points to: this conversation, an issue link or
