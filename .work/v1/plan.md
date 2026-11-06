@@ -18,7 +18,8 @@ user sees only the judgment calls and a "step back" verdict.
 ## Decisions
 
 - **Reuse vs. own**: reuse Matt Pocock's `grilling` (copied, unchanged) and
-  Ponytail (installed as its own plugin). Write the rest ourselves.
+  Ponytail (installed as its own plugin; changed 2026-11-06, see Skeptic).
+  Write the rest ourselves.
   Rejected: Matt's full plugin (38 extra skills of noise).
 - **Package**: one repo `repos/d3mnjx/devs`, a Claude Code plugin with neutral
   skill text. Rejected: manifests for other harnesses now (no user yet).
@@ -31,6 +32,10 @@ user sees only the judgment calls and a "step back" verdict.
   (not portable).
 - **Skeptic**: thin file that loads Ponytail plus tuning lines. Rejected: a copy
   of Ponytail (no updates).
+- **Skeptic** (changed 2026-11-06): `skeptic.md` now holds its own adapted
+  copy of Ponytail's "should it exist / can it be smaller" rules. Reason: the
+  Ponytail plugin install asks about a webhook and a task board, and its hooks
+  and changes are outside our control. Rejected: depending on the plugin.
 - **Sorting**: the main session labels each finding FIX / CONTEST / ESCALATE /
   DECLINE and must open the cited code first. CONTEST needs checkable evidence.
   Rejected: a fresh judge (lacks context); a separate verify agent (extra part).

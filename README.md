@@ -84,14 +84,6 @@ Commit `.work/` or add it to `.gitignore`. Each project decides.
 /plugin install devs@urza
 ```
 
-The skeptic uses [Ponytail](https://github.com/DietrichGebert/ponytail).
-Install it too:
-
-```
-/plugin marketplace add DietrichGebert/ponytail
-/plugin install ponytail@ponytail
-```
-
 Other harnesses: the skills are plain `SKILL.md` files with no Claude Code tool
 names. Copy `skills/` into the harness's skills folder. The `review` skill
 needs a harness that can start fresh subagents.
@@ -106,6 +98,8 @@ needs a harness that can start fresh subagents.
 - `skills/brainstorm/grilling.md` is copied unchanged from
   [mattpocock/skills](https://github.com/mattpocock/skills) at `4ae2317`, MIT
   license (see `skills/brainstorm/grilling-LICENSE`).
-- The skeptic uses [Ponytail](https://github.com/DietrichGebert/ponytail).
+- `skills/review/personas/skeptic.md` adapts the review rules of
+  [Ponytail](https://github.com/DietrichGebert/ponytail) by Dietrich Gebert,
+  MIT license (see `skills/review/personas/skeptic-LICENSE`).
 - The fresh reviewers and the finding labels come from Google's
   [Elephant-Goldfish Model](https://github.com/google/elephant-goldfish-model).
