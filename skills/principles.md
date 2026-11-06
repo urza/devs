@@ -4,10 +4,14 @@ These are the user's own principles for every project. When the project's
 AGENTS.md, CLAUDE.md, or coding standards say something different, the
 project's rules win.
 
-<!-- Only some roles read this file: plan, implement, and the neutral and
-skeptic reviewers. Each one points here with its own line. Security,
-performance, ux, and step back do not, so they stay in their own lanes.
-To give the principles to another role, add the same line to its file. -->
+<!-- Who gets these principles, and how:
+- plan/SKILL.md and implement/SKILL.md hold inline copies (direct text is
+  followed more reliably than "read this file"). plan leaves out the comments
+  part, because it writes no code. Keep the copies the same as this file.
+- neutral.md and skeptic.md point here, and review pastes this file into
+  their briefs, so the reviewers also get direct text.
+- security, performance, ux, and step back do not get it, so they stay in
+  their own lanes. To add a reviewer, copy the pointer line into its file. -->
 
 ## Core values
 

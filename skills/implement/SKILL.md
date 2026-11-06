@@ -21,10 +21,34 @@ overrule, say so and ask before you start.
   The code review diffs against this commit, so do not overwrite it on a
   second run.
 
+## Coding principles
+
+These are the user's own principles. The project's AGENTS.md, CLAUDE.md, or
+coding standards win where they differ.
+
+- **Simplicity:** prefer straightforward solutions over over-engineered ones.
+- **Maintainability:** code that is easy to change. Avoid tight coupling, and
+  keep components focused.
+- **Understandability:** think about the next developer, including future
+  you. Will they understand this?
+- **Elegance:** minimal moving parts, clear intent, no unnecessary
+  complexity.
+
+When in doubt, choose the simpler path. Refactor when patterns emerge, not in
+anticipation of hypothetical needs.
+
+Comments explain "why": the constraint, bug, or trade-off that shaped the
+code. When a line looks removable or wrong but is deliberate, say so at that
+line, because that is where a future cleanup would break it. Keep the reason
+at the code, not only in docs or commit messages.
+
+<!-- Copy of ../principles.md, inline on purpose: direct text is followed
+more reliably than a pointer to a file. Keep the copies in plan/SKILL.md,
+implement/SKILL.md, and principles.md the same. -->
+
 ## 3. Build
 
-- Read the user's coding principles in `../principles.md` and follow them.
-  The project's own rules win where they differ.
+- Build by the coding principles above.
 - Follow **Steps** in order. Write the tests that **Testing** asks for.
 - Stay inside the plan. If the plan is wrong or a step cannot work, stop and
   tell the user. Suggest a return to the `plan` skill. Do not redesign

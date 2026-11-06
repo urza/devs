@@ -60,8 +60,9 @@ user sees only the judgment calls and a "step back" verdict.
   pick a style before you know what the session needs).
 - **Models**: none hardcoded; each role uses the session model.
 - **Principles** (added 2026-11-06): `skills/principles.md` holds the user's
-  coding principles. Only plan, implement, neutral, and skeptic read it, each
-  with its own pointer line. Rejected: a session hook (Claude Code only, and
+  coding principles. plan and implement carry an inline copy (changed
+  2026-11-06: direct text is stronger than "read this file"); review pastes
+  the file into the neutral and skeptic briefs. Rejected: a session hook (Claude Code only, and
   active outside devs); copies in every file (drift).
 
 ## Out of scope

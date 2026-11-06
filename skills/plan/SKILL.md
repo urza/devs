@@ -6,8 +6,28 @@ description: Turn an idea, a brainstorm conversation, an issue, a file, or a spe
 Write `plan.md` for one feature. The reviewers and the implementer read this
 file, and they do not see this conversation. So the plan must stand alone.
 
-Read the user's coding principles in `../principles.md` first. Design the
-plan so it follows them. The project's own rules win where they differ.
+## Coding principles
+
+These are the user's own principles. The project's AGENTS.md, CLAUDE.md, or
+coding standards win where they differ.
+
+- **Simplicity:** prefer straightforward solutions over over-engineered ones.
+- **Maintainability:** code that is easy to change. Avoid tight coupling, and
+  keep components focused.
+- **Understandability:** think about the next developer, including future
+  you. Will they understand this?
+- **Elegance:** minimal moving parts, clear intent, no unnecessary
+  complexity.
+
+When in doubt, choose the simpler path. Refactor when patterns emerge, not in
+anticipation of hypothetical needs.
+
+Design the plan so it follows them.
+
+<!-- Copy of ../principles.md, inline on purpose: direct text is followed
+more reliably than a pointer to a file. Keep the copies in plan/SKILL.md,
+implement/SKILL.md, and principles.md the same. This copy leaves out the
+comments part, because plan writes no code. -->
 
 ## 1. Take the input
 

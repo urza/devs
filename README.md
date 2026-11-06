@@ -69,7 +69,8 @@ flowchart LR
 
 `skills/principles.md` holds your coding principles: simplicity,
 maintainability, understandability, elegance, and comments that explain why.
-`plan`, `implement`, and the neutral and skeptic reviewers read it. Security,
+`plan` and `implement` carry a copy inline, and `review` pastes it into the
+neutral and skeptic reviewers' briefs. Security,
 performance, ux, and step back do not, so they stay in their own lanes. A
 project's own AGENTS.md or CLAUDE.md wins where it differs.
 
