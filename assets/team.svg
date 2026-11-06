@@ -185,5 +185,5 @@
 <path d="M1189.0,128.0 H1311.0 Q1325.0,128.0 1325.0,142.0 V154.0 Q1325.0,168.0 1311.0,168.0 H1263 L1254,186 L1249,168.0 H1189.0 Q1175.0,168.0 1175.0,154.0 V142.0 Q1175.0,128.0 1189.0,128.0 Z" fill="none" stroke-width="1" opacity="0.4" transform="translate(1.5 1)"/>
 <text x="1250" y="154" font-size="15" text-anchor="middle" font-weight="normal" stroke="none" fill="#111" >Is it worth it?</text>
 </g>
-<text x="1340" y="456" font-size="14" text-anchor="end" font-weight="normal" stroke="none" fill="#111" font-family="ui-monospace, Menlo, Consolas, monospace" fill="#888">devs</text>
+<text x="1340" y="456" font-size="14" text-anchor="end" font-weight="normal" stroke="none" fill="#888" font-family="ui-monospace, Menlo, Consolas, monospace">devs</text>
 </svg>

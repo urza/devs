@@ -16,7 +16,7 @@ only the judgment calls.
 flowchart TD
     start(["Start: chat, issue, file, or spec"])
     brainstorm["<b>brainstorm</b><br/>talk it through, settle decisions"]
-    plan["<b>plan</b><br/>writes .work/&lt;feature&gt;/plan.md"]
+    plan["<b>plan</b><br/>writes .work/#lt;feature#gt;/plan.md"]
     rplan{{"<b>review</b> the plan"}}
     implement["<b>implement</b><br/>checks pass, commit"]
     rcode{{"<b>review</b> the code"}}

@@ -36,8 +36,10 @@ def line(d, sw=2.2, twice=True):
     if twice:  # a second, lighter pass makes it read as a pen sketch
         P(f'<path d="{d}" stroke-width="{sw*0.5:.1f}" opacity="0.45" transform="translate({wob(0,1.4):.1f} {wob(0,1.4):.1f})"/>')
 
-def text(x, y, s, size=17, anchor="middle", weight="normal", extra=""):
-    P(f'<text x="{x}" y="{y}" font-size="{size}" text-anchor="{anchor}" font-weight="{weight}" stroke="none" fill="#111" {extra}>{s}</text>')
+def text(x, y, s, size=17, anchor="middle", weight="normal", fill="#111", extra=""):
+    # No attribute may repeat: GitHub shows an SVG as a standalone image, and a
+    # duplicate attribute makes the whole file invalid XML there.
+    P(f'<text x="{x}" y="{y}" font-size="{size}" text-anchor="{anchor}" font-weight="{weight}" stroke="none" fill="{fill}" {extra}>{s}</text>')
 
 def bubble(x, y, w, h, tail_x, tail_y, msg):
     # Rounded box with a tail pointing at the speaker.
@@ -180,6 +182,6 @@ for x, msg in zip(xs, says):
 bubble(SX, 148, 150, 40, SX + 4, 186, "Is it worth it?")
 
 P('</g>')
-text(W - 20, H - 14, "devs", 14, anchor="end", extra='font-family="ui-monospace, Menlo, Consolas, monospace" fill="#888"')
+text(W - 20, H - 14, "devs", 14, anchor="end", fill="#888", extra='font-family="ui-monospace, Menlo, Consolas, monospace"')
 P('</svg>')
 open(sys.argv[1], "w").write("\n".join(out))
