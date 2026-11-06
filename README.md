@@ -12,40 +12,16 @@ only the judgment calls.
 ## Flow
 
 ```mermaid
-%%{init: {"flowchart": {"wrappingWidth": 260}}}%%
-flowchart TD
-    start(["Start: chat, issue, file, or spec"])
-    brainstorm["<b>brainstorm</b><br/>talk it through, settle decisions"]
-    plan["<b>plan</b><br/>writes .work/#lt;feature#gt;/plan.md"]
-    rplan{{"<b>review</b> the plan"}}
-    implement["<b>implement</b><br/>checks pass, commit"]
-    rcode{{"<b>review</b> the code"}}
-    done(["Done: you merge"])
-    stop(["End"])
-
-    start -->|rough idea| brainstorm
-    start -->|already specced| plan
-    brainstorm --> plan
-    plan --> rplan
-    rplan -->|go| implement
-    rplan -.->|change course| plan
-    rplan -.->|stop| stop
-    implement --> rcode
-    rcode -->|go| done
-    rcode -.->|simplify| implement
-    rcode -.->|change course| plan
-    rcode -.->|revert / stop| stop
+flowchart LR
+    brainstorm["💬 brainstorm"] --> plan["📝 plan"] --> r1("🔍 review") --> implement["🔨 implement"] --> r2("🔍 review") --> ship(["🚀 ship"])
 
     classDef think fill:#fef3c7,stroke:#d97706,color:#1f2937
     classDef build fill:#d1fae5,stroke:#059669,color:#1f2937
     classDef review fill:#e0e7ff,stroke:#4f46e5,color:#1f2937
     class brainstorm,plan think
     class implement build
-    class rplan,rcode review
+    class r1,r2 review
 ```
-
-Dashed arrows go back or end the work. At each fork you decide; the step back
-verdict is advice.
 
 Start each stage with its command (`/devs:brainstorm`, `/devs:plan`,
 `/devs:review`, `/devs:implement`) or in plain words, for example "review this
@@ -63,30 +39,14 @@ with security and skeptic".
 ## Review
 
 ```mermaid
-%%{init: {"flowchart": {"wrappingWidth": 260}}}%%
 flowchart LR
-    target["plan.md<br/>or the diff"]
-    subgraph fresh ["Fresh subagents, no chat history"]
-        direction TB
-        neutral["neutral"]
-        skeptic["skeptic"]
-        lenses["security · performance · ux<br/><i>when needed</i>"]
-    end
-    sort["<b>Main session</b><br/>opens the code, labels:<br/>FIX · CONTEST<br/>ESCALATE · DECLINE"]
-    fix["Apply<br/>the FIX items"]
-    stepback["<b>Step back</b><br/>go, change course,<br/>or stop"]
-    you(["<b>You</b><br/>verdict + escalated<br/>questions, one at a time"])
-
-    target --> neutral & skeptic & lenses
-    neutral & skeptic & lenses --> sort
-    sort --> fix --> stepback --> you
+    work["📄 your plan<br/>or code"] --> neutral["🧐 neutral"] & skeptic["✂️ skeptic"] & lenses["🛡️ security · ⚡ perf · 🎨 ux"]
+    neutral & skeptic & lenses --> stepback["🔭 step back:<br/>is it worth it?"] --> you(["🙋 you decide"])
 
     classDef review fill:#e0e7ff,stroke:#4f46e5,color:#1f2937
     classDef think fill:#fef3c7,stroke:#d97706,color:#1f2937
-    classDef main fill:#f1f5f9,stroke:#475569,color:#1f2937
     class neutral,skeptic,lenses review
     class stepback think
-    class sort,fix main
 ```
 
 - **Reviewers** run as fresh subagents with no chat history. `neutral` and
