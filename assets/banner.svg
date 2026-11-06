@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="devs: a small dev process with roles for AI coding agents">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#334155"/>
+    </pattern>
+    <!-- One token per role: a filled circle; the icon is drawn on top. -->
+    <g id="token-think"><circle r="34" fill="#3b2a12" stroke="#f59e0b" stroke-width="2"/></g>
+    <g id="token-build"><circle r="34" fill="#0f2e22" stroke="#10b981" stroke-width="2"/></g>
+    <g id="token-review"><circle r="34" fill="#1a2245" stroke="#818cf8" stroke-width="2"/></g>
+  </defs>
+
+  <!-- The background is part of the image on purpose: the banner then looks
+       the same on GitHub's light and dark themes. -->
+  <rect width="1200" height="420" rx="24" fill="url(#bg)"/>
+  <rect width="1200" height="420" rx="24" fill="url(#dots)" opacity="0.6"/>
+
+  <!-- Wordmark -->
+  <text x="72" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="100" font-weight="700" fill="#f8fafc"><tspan fill="#f59e0b">/</tspan>devs</text>
+  <text x="76" y="188" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#94a3b8">A small dev process with roles, for AI coding agents.</text>
+  <text x="76" y="222" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#64748b">Fresh eyes on every plan and diff. You make only the judgment calls.</text>
+
+  <!-- Flow line through the tokens -->
+  <path d="M110 330 H950" stroke="#475569" stroke-width="2" stroke-dasharray="6 8" fill="none"/>
+  <!-- Step back sits higher: it looks at the whole thing from a distance. -->
+  <path d="M950 330 C1000 330 1010 250 1080 250" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 8" fill="none" opacity="0.7"/>
+
+  <!-- Bracket over the reviewers -->
+  <path d="M416 278 v-10 h458 v10" stroke="#818cf8" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <text x="645" y="258" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" letter-spacing="2" fill="#a5b4fc">FRESH-CONTEXT REVIEWERS</text>
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#cbd5e1" text-anchor="middle">
+    <g stroke="#f1f5f9" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+
+      <!-- brainstorm: speech bubble -->
+      <g transform="translate(110 330)">
+        <use href="#token-think"/>
+        <rect x="-15" y="-13" width="30" height="21" rx="6"/>
+        <path d="M-6 8 L-10 15 L1 8"/>
+        <g fill="#f1f5f9" stroke="none"><circle cx="-7" cy="-2.5" r="2"/><circle cx="0" cy="-2.5" r="2"/><circle cx="7" cy="-2.5" r="2"/></g>
+      </g>
+
+      <!-- plan: document -->
+      <g transform="translate(212 330)">
+        <use href="#token-think"/>
+        <path d="M-11 -15 H4 L11 -8 V15 H-11 Z"/>
+        <path d="M4 -15 V-8 H11"/>
+        <path d="M-6 -1 H6 M-6 5 H6 M-6 11 H2"/>
+      </g>
+
+      <!-- implement: code brackets -->
+      <g transform="translate(314 330)">
+        <use href="#token-build"/>
+        <path d="M-7 -10 L-16 0 L-7 10 M7 -10 L16 0 L7 10 M3 -13 L-3 13"/>
+      </g>
+
+      <!-- neutral: magnifier -->
+      <g transform="translate(416 330)">
+        <use href="#token-review"/>
+        <circle cx="-3" cy="-3" r="9"/>
+        <path d="M4 4 L13 13"/>
+      </g>
+
+      <!-- skeptic: scissors (cut what is not needed) -->
+      <g transform="translate(530 330)">
+        <use href="#token-review"/>
+        <circle cx="-7" cy="9" r="4.5"/>
+        <circle cx="7" cy="9" r="4.5"/>
+        <path d="M-4.5 5.5 L9 -14 M4.5 5.5 L-9 -14"/>
+      </g>
+
+      <!-- security: shield -->
+      <g transform="translate(644 330)">
+        <use href="#token-review"/>
+        <path d="M0 -15 L12 -10 V-1 C12 7 6 12 0 15 C-6 12 -12 7 -12 -1 V-10 Z"/>
+        <path d="M-5 0 L-1 4 L6 -4"/>
+      </g>
+
+      <!-- performance: bolt -->
+      <g transform="translate(758 330)">
+        <use href="#token-review"/>
+        <path d="M3 -15 L-9 2 H0 L-3 15 L9 -2 H0 Z"/>
+      </g>
+
+      <!-- ux: pointer -->
+      <g transform="translate(874 330)">
+        <use href="#token-review"/>
+        <path d="M-8 -13 L-8 10 L-2 4 L2 13 L6 11 L2 2 L10 2 Z"/>
+      </g>
+
+      <!-- step back: binoculars -->
+      <g transform="translate(1080 250)">
+        <use href="#token-think"/>
+        <circle cx="-8" cy="6" r="6.5"/>
+        <circle cx="8" cy="6" r="6.5"/>
+        <path d="M-14 4 L-11 -10 H-5 L-3 2 M14 4 L11 -10 H5 L3 2 M-3 1 H3"/>
+      </g>
+    </g>
+
+    <text x="110" y="388">brainstorm</text>
+    <text x="212" y="388">plan</text>
+    <text x="314" y="388">implement</text>
+    <text x="416" y="388">neutral</text>
+    <text x="530" y="388">skeptic</text>
+    <text x="644" y="388">security</text>
+    <text x="758" y="388">performance</text>
+    <text x="874" y="388">ux</text>
+    <text x="1080" y="308">step back</text>
+  </g>
+</svg>
