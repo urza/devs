@@ -52,6 +52,10 @@ for this work already exists, use it and update its `plan.md`.
 - Otherwise grill only the open decisions. Follow `../brainstorm/grilling.md`,
   but ask one question at a time, each with your recommended answer. No open
   decisions: no questions.
+- Before you ask, find the crux: the one thing that, once decided, settles
+  the rest. Ask that in one or two sentences, with the options and your pick.
+  If the question needs a paragraph of setup, you have not found the crux
+  yet.
 
 ## 4. Write plan.md
 

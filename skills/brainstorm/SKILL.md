@@ -16,6 +16,10 @@ One change: ask **one question at a time**, not the whole frontier. Pick the
 question that unblocks the most other decisions. Give the options and your
 recommended answer, worded so "yes" accepts it.
 
+Before you ask, find the crux: the one thing that, once decided, settles the
+rest. Ask that in one or two sentences, with the options and your pick. If
+the question needs a paragraph of setup, you have not found the crux yet.
+
 <!-- Why grilling.md is a plain file and not edited: it stays a byte-for-byte
 copy of upstream, so updates from mattpocock/skills are a plain file copy.
 As a SKILL.md it showed up in the command menu as a confusing twin. -->
