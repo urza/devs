@@ -65,4 +65,5 @@ Commit when the checks pass. The message says what was built and points to
 ## 5. Hand off
 
 End with 2 or 3 lines: what you built, and what you skipped or could not
-check. Suggest the `review` skill on the code as the next step.
+check. Then load the `review` skill on the code, unless the user asked for
+the build only.

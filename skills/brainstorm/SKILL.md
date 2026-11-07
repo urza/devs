@@ -41,4 +41,5 @@ Keep each message short. One topic or one question at a time.
 
 When the tree has no open decisions, give a short summary of what you agreed
 and ask the user to confirm it. Do not write files. After the user confirms,
-suggest the `plan` skill as the next step.
+load the `plan` skill with the summary as input, unless the user wants to
+stop here.

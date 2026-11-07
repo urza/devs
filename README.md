@@ -23,14 +23,21 @@ flowchart LR
     class r1,r2 review
 ```
 
-Start each stage with its command (`/devs:brainstorm`, `/devs:plan`,
-`/devs:review`, `/devs:implement`) or in plain words, for example "review this
-with security and skeptic".
+Run `/devs:start` with an issue, a file, or a sentence, or with nothing and
+it asks what to work on. Each stage then loads the next one by itself. It
+stops only for your answers, a CHANGE COURSE or STOP verdict, or a failed
+build. It never merges or pushes.
+
+You can also start any stage alone with its command (`/devs:brainstorm`,
+`/devs:plan`, `/devs:review`, `/devs:implement`) or in plain words, for
+example "review this with security and skeptic". Say "only the review" to
+stop after that stage.
 
 ## Skills
 
 | Skill | What it does |
 |---|---|
+| `start` | Takes the input (issue, file, text) or asks for it, picks the first stage, and runs the flow to the end. Continues an existing `.work/<feature>/` from its next stage. |
 | `brainstorm` | A two-way talk about the idea: the model brings options, opinions, and prior art, and grills you one question at a time until every decision is settled. Uses Matt Pocock's `grilling` method (`skills/brainstorm/grilling.md`). |
 | `plan` | Takes any input, grills only the open decisions, writes `plan.md`. |
 | `review` | Fresh reviewers → sort findings → apply clear fixes → step back verdict → your decisions. Works on the plan and on the code. |

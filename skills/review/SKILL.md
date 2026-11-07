@@ -121,8 +121,13 @@ Keep it to about 15 lines:
    answer, worded so "yes" accepts it. Wait for each answer. Apply it, and
    record it in the report.
 
-Then suggest the next step from the verdict: plan review GO → `implement`;
-code review GO → the user merges; CHANGE COURSE → back to `plan` or
-`implement`; STOP → end. The user decides. The verdict is advice.
+Then act on the verdict, after all escalations have answers:
+
+- Plan review GO: load the `implement` skill, unless the user asked for the
+  review only.
+- Code review GO: done. Tell the user the branch is ready to merge. Never
+  merge or push.
+- CHANGE COURSE or STOP: stop and ask the user. Recommend `plan`,
+  `implement`, or an end. The verdict is advice; the user decides.
 
 One round only. Run a second round only when the user asks.

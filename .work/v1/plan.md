@@ -65,10 +65,17 @@ user sees only the judgment calls and a "step back" verdict.
   the file into the neutral and skeptic briefs. Rejected: a session hook (Claude Code only, and
   active outside devs); copies in every file (drift).
 
+- **Chain** (added 2026-11-07): each skill loads the next one when it ends,
+  and a `start` skill takes the input and runs the whole flow. It stops only
+  for the user's answers, a CHANGE COURSE or STOP verdict, or a failed
+  build. It never merges or pushes. Rejected: a pause for "go" between
+  stages (the user asked to type nothing between stages); chain only inside
+  `start` (a stage run alone would still need typed commands).
+
 ## Out of scope
 
 - Manifests for harnesses other than Claude Code.
-- A `/ship` chain, `retro`, automatic review loops, a verify agent.
+- A `/ship` command (merge, push), `retro`, automatic review loops, a verify agent.
 - Model selection per persona.
 
 ## Testing

@@ -47,8 +47,8 @@ for this work already exists, use it and update its `plan.md`.
   the environment can answer. Never ask the user for a fact you can look up.
 - **Decisions are the user's.** List every decision the plan needs that the
   input does not settle.
-- If the input is a rough idea (no clear problem or solution), suggest the
-  `brainstorm` skill first and stop.
+- If the input is a rough idea (no clear problem or solution), tell the user
+  in one line and load the `brainstorm` skill instead.
 - Otherwise grill only the open decisions. Follow `../brainstorm/grilling.md`,
   but ask one question at a time, each with your recommended answer. No open
   decisions: no questions.
@@ -86,5 +86,5 @@ agent judge trade-offs from it.
 
 ## 5. Hand off
 
-Show the user the path to `plan.md` and a 3-line summary. Suggest the
-`review` skill on the plan as the next step.
+Show the user the path to `plan.md` and a 3-line summary. Then load the
+`review` skill on the plan, unless the user asked for the plan only.
