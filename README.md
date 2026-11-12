@@ -61,6 +61,19 @@ flowchart LR
     class stepback think
 ```
 
+| Persona | What it does |
+|---|---|
+| 🧐 `neutral` | A careful senior developer who sees the work for the first time. Checks that it is clear, complete, and does what it says. |
+| ✂️ `minimalist` | The laziest senior developer in the room. "The best code is the code never written." Looks for what should not exist and what can be smaller. |
+| 👎 `skeptic` | Reads only the plan and gives the cons. It has no checklist. |
+| 🛡️ `security` | Reports only problems with a real path: who the attacker is, what they control, and what they get. |
+| ⚡ `performance` | Finds the real load of the project, today and after months of use. Judges only against that. |
+| 🎨 `ux` | Speaks for the person who uses the result. Taste is not a finding. |
+| 🔭 `step back` | Was not in the room. Asks if this is the right thing, if it is worth it, and if a cheaper way exists. |
+
+All except the skeptic can report that they found nothing. They never invent
+a finding to have something to report.
+
 - **Reviewers** run as fresh subagents with no chat history, on the same
   model as your session unless you name another. `neutral` and
   `minimalist` always run. `security`, `performance`, and `ux` run when the
@@ -75,7 +88,8 @@ flowchart LR
   in plain words. Reviewers question both kinds. A finding against one of
   your own decisions always comes back to you as a question.
 - **Persona files** are in `skills/review/personas/`. Each has an "On a plan"
-  and an "On code" section, plus "Tuning notes" for your own rules.
+  and an "On code" section, plus "Tuning notes" for your own rules. The lists
+  in a file are examples. A reviewer reports anything that fits its purpose.
 - **Sorting.** The main session opens the cited code and labels each finding:
   - FIX: right and clear, so it is applied. A FIX only corrects or removes.
     A fix that adds a mechanism, an option, or a dependency comes to you as

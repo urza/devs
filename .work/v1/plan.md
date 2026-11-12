@@ -96,6 +96,21 @@ user sees only the judgment calls and a "step back" verdict.
 - **Zero option** (added 2026-11-09): a decision that adds a mechanism must
   reject "without it" first. Rejected: any alternative counts (a different
   number hid the option of no mechanism).
+- **Open lists** (added 2026-11-12): each reviewer file states its purpose
+  first. Its lists are examples, and a paragraph in the intro says so: the
+  reviewer reports what fits its purpose, also when no line names it. The
+  guard of each file (a real path, the two loads, a concrete case, "taste
+  is not a finding") stays the limit. The skeptic has no lists and does not
+  change. Not replayed yet on a test case. Rejected: longer lists (no list
+  is complete); a motto line for each persona (tried the same day, the user
+  liked none; only the minimalist keeps its own).
+- **Later load** (added 2026-11-12): the performance reviewer judges against
+  two loads: today, and the same users after months of normal use. Reason:
+  in Yap a jump to a pinned message was quick on day 1 and took 7 seconds a
+  few weeks later (history loaded in batches of 50, one request per batch,
+  with a 50 ms wait). "Judge only against the real load" let it pass.
+  Rejected: any future scale (the reviewer then asks for scale that the
+  project does not have).
 
 - **Chain** (added 2026-11-07): each skill loads the next one when it ends,
   and a `start` skill takes the input and runs the whole flow. It stops only
